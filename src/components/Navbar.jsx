@@ -4,10 +4,7 @@ import styled from "styled-components";
 
 const Navbar = () => {
   const Nav = styled.nav`
-    .navbar-list {Complete Ecommerce Cart Functionality 
-First, we need the API for all the products => https://course-api.com/react-store-products
-API for the single products => https://course-api.com/react-store-single-product?id=recZkNf2kwmdBcqd0 ( we need to pass the id string at the end to get the specific id details )
-
+    .navbar-list {
       display: flex;
       gap: 4.8rem;
 
