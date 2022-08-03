@@ -9,7 +9,7 @@ const Services = () => {
   console.log(services);
 
   return (
-    <Wrapepr classname="section">
+    <Wrapper className="section">
       <h2 className="common-heading">Our Services</h2>
       <div className="container grid grid-three-column">
         {services.map((curElem) => {
@@ -30,11 +30,11 @@ const Services = () => {
           );
         })}
       </div>
-    </Wrapepr>
+    </Wrapper>
   );
 };
 
-const Wrapepr = styled.section`
+const Wrapper = styled.section`
   padding: 9rem 0;
   background-color: ${({ theme }) => theme.colors.bg};
 
@@ -100,6 +100,12 @@ const Wrapepr = styled.section`
       margin-top: 1.5rem;
       height: 20rem;
       transition: all 0.2s linear;
+    }
+  }
+
+  @media (max-width: 790px) {
+    .grid-three-column {
+      grid-template-columns: 1fr;
     }
   }
 `;
