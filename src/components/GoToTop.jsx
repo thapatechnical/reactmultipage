@@ -10,7 +10,7 @@ const GoToTop = () => {
   };
 
   const listenToScroll = () => {
-    let heightToHidden = 250;
+    let heightToHidden = 20;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -41,6 +41,7 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   .top-btn {
     font-size: 2.4rem;
@@ -70,6 +71,13 @@ const Wrapper = styled.section`
       100% {
         transform: translateY(1rem);
       }
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .top-btn {
+      right: 0;
+      left: 40%;
     }
   }
 `;

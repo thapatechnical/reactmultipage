@@ -103,7 +103,14 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (max-width: 790px) {
+  @media (max-width: ${({ theme }) => theme.media.tab}) {
+    .grid-three-column {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .grid-two-column,
     .grid-three-column {
       grid-template-columns: 1fr;
     }

@@ -35,7 +35,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-
+      <GoToTop />
       <BrowserRouter>
         <Header />
         <Routes>
@@ -45,7 +45,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        <GoToTop />
+
         <Footer />
       </BrowserRouter>
     </ThemeProvider>

@@ -14,21 +14,23 @@ html {
   overflow-x: hidden;
 }
 
-body{
-   overflow-x: hidden;
+body {
+  overflow-x: hidden;
+   scrollbar-color: rgb(98 84 243);
+    scrollbar-width: thin;
 }
 
-::-webkit-scrollbar{
+body::-webkit-scrollbar {
   width: 1.5rem;
 }
 
-::-webkit-scrollbar-track{
-  background-color: rgb(24 24 29);
+body::-webkit-scrollbar-track {
+   background-color: rgb(24 24 29);
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
  
-    background: #fff;
+  background: #fff;
     border: 5px solid transparent;
     border-radius: 9px;
     background-clip: content-box;
@@ -129,225 +131,31 @@ li {
 /* rem  */
 /* em  */
 /* 1500px */
-@media (max-width: 95em) {
-  .container {
-    max-width: 130rem;
-    padding: 0 3.2rem;
-  }
 
-  .navbar-lists {
-    gap: 3.4rem;
-  }
+//998px
+@media (max-width:${({ theme }) => theme.media.tab}) {
+      .container{
+        padding: 0 3.2rem;
+      }
+
+        .grid-three-column {
+      grid-template-columns: 1fr 1fr;
+    }
 }
 
-/* for 1200px */
-@media (max-width: 75em) {
-  html {
-    font-size: 56.25%;
-  }
+@media (max-width:${({ theme }) => theme.media.mobile}) {
 
-  .container {
-    max-width: 110rem;
-  }
+      html{
+        font-size: 50%;
+      }
 
-  .grid {
-    gap: 4.8rem;
-  }
-  .section-resume .grid-two-column {
-    grid-template-columns: 1fr 2fr;
-  }
+      .grid{
+        gap: 3.2rem;
+      }
 
-  .section-resume .resume-data-subsection .grid-two-column {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* for 980px */
-@media (max-width: 980px) {
-  html {
-    font-size: 50%;
-  }
-
-  /* hero section  */
-  .section-hero h1 {
-    line-height: 1.05;
-  }
-
-  /* services section  */
-  .section-services .grid {
-    gap: 6rem;
-  }
-
-  .section-services .grid-three-column {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* resuem section  */
-  .section-resume .grid-two-column {
-    grid-template-columns: 1fr;
-  }
-
-  .resume-img {
-    grid-row: 2;
-    /* transform: translateY(-2rem); */
-  }
-
-  .section-resume .grid-two-column img {
-    width: 50%;
-  }
-
-  .section-footer .grid-four-column {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .img-overlay .common-heading {
-    font-size: 3.2rem;
-  }
-
-  .img-overlay .common-heading::before,
-  .img-overlay .common-heading::after {
-    contain: "";
-    width: 0;
-    height: 0;
-  }
-}
-
-/* below 790px  */
-@media (max-width: 790px) {
-  .container {
-    max-width: 71rem;
-  }
-
-  .section-hero .grid-two-column {
-    grid-template-columns: 1fr;
-
-  }
-
-   .section-hero .grid-three-column {
-    grid-template-columns: 1fr;
-  }
-
-
-  .section-hero-data {
-    align-items: center;
-  }
-
-  .hero-heading {
-    text-align: center;
-  }
-  .hero-para {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  .section-hero img {
-    width: 70%;
-  }
-
-  /* bio data  */
-  .section-biodata .grid-two-column {
-    grid-template-columns: 1fr;
-  }
-  .section-biodata .bio-image {
-    /* grid-row-start: 2;
-    grid-row-end: 3;
-    grid-row: 2/3; */
-    grid-row: 2;
-    margin-top: 3.2rem;
-  }
-  .section-biodata .bio-image img {
-    width: 50%;
-  }
-
-  /* portfoilio section */
-  .section-portfolio .grid-three-column {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* word data  */
-  .section-work-data .grid-four-column {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* below 560px  */
-@media (max-width: 35em) {
-  /* .container {
-    max-width: 48rem;
-  } */
-
-  .header {
-    padding: 0 3.2rem;
-  }
-  .header .logo {
-    width: 50%;
-  }
-
-  /* portfolio   */
-  .p-btns {
-    gap: 2.8rem;
-  }
-
-  .btn {
-    padding: 1rem 2rem;
-  }
-
-  .img-overlay .common-heading {
-    font-size: 2.4rem;
-  }
-
-  .counter-numbers {
-    font-size: 3.2rem;
-  }
-
-  /* services section  */
-  .section-services .grid-three-column {
-    grid-template-columns: 1fr;
-  }
-
-  /* resume section  */
-
-  .resume-data-subsection {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3.2rem;
-  }
-
-  .resume-data-right .resume-data-button,
-  .resume-data-bottom-subsection .resume-data-button {
-    min-width: 30%;
-  }
-
-  .resume-data-subsection .resume-data-left .grid-two-column {
-    grid-template-columns: 1fr;
-  }
-
-  .resume-data-right {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2.4rem;
-  }
-
-  .section-freelancer h2 {
-    font-size: 3rem;
-  }
-
-  .contact-container {
-    padding: 0 3.2rem;
-  }
-  .contact-container .grid-two-column {
-    grid-template-columns: 1fr;
-  }
-
-  .section-contact-main input[type="submit"] {
-    max-width: 40%;
-  }
-
-  /* footer section  */
-  .section-footer .f-about,
-  .section-footer .f-address {
-    grid-column: 1/-1;
-  }
+      .grid-two-column, .grid-three-column, .grid-four-column{
+        grid-template-columns: 1fr;
+      }
 }
 
 
